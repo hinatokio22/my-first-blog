@@ -1,0 +1,14 @@
+{% extend 'base.base.html'%}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+
+{% block content %}
+<form method="post">s
+  {% csrf_token %}
+  {{ form.as_p}}
+  <button type="submit" name="boton1">Convertir</button>
+
+</form>
+{% endblock %}
