@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form action="{% url 'Polinomios' %}" method="POST">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+
+  <div class="btns">
+      <h2>Metodo de raices de polinomios</h2>
+      <br></br>
+      <label for="funcion"><strong>Funcion:</strong>
+
+      <input type="text" value="" id="funcion" name="funcion"></label>
+      <br></br>
+
+  </div>
+  <div class="btns"><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+  <br></br><br></br>
+  <tbody>
+    {% if enviar %}
+    <tr>
+      <td>la raiz es:</td>
+      <td>{{enviar}}</td>
+    </tr>
+    {% endif %}
+  </tbody>
+
+</form>
+
+<br></br><br></br><br></br>
+{% endblock %}

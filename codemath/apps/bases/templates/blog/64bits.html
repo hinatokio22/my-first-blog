@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form action="{% url 'Ieeesc' %}" method="POST">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+
+  <div class="btns">
+      <h2>Estandar IEEE 64Bits</h2>
+      <br></br>
+      <label for="decimal"><strong>Decimal:</strong>
+      <input type="text" value={{dec}}"" id="decimal" name="decimal"></label>
+      <br></br>
+      <label for="signo"><strong>Signo:</strong>
+      <input type="text" value="{{sign}}" id="signo" name="signo"></label>
+      <br></br>
+      <label for="expon"><strong>Exponente:</strong>
+      <input type="text" value="{{exponen}}" id="expon" name="expon"></label>
+      <br></br>
+      <label for="mantisa"><strong>Mantisa:</strong>
+      <input type="text" value="{{mantis}}" id="mantisa" name="mantisa"></label>
+      <br></br>
+
+  </div>
+  <div class="btns"><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+  <br></br><br></br>
+  <tbody>
+
+  </tbody>
+
+</form>
+
+<br></br><br></br><br></br>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form action="{% url 'Evaluador' %}" method="POST">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+
+  <div class="btns">
+      <h2>Evaluador de funciones</h2>
+      <br></br>
+      <label for="funcion"><strong>Funcion:</strong>
+
+      <input type="text" value="" id="funcion" name="funcion"></label>
+
+      <br></br>
+      <label for="valorx"><strong>Valor de x:</strong>
+      <input type="text" value="" id="valorx" name="valorx"></label>
+      <br></br>
+  </div>
+  <div class="btns"><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+  <br></br><br></br>
+  <tbody>
+    {% if enviar %}
+    <tr>
+      <td>el valor de la funcion evaluada es: </td>
+      <td>{{enviar}}</td>
+    </tr>
+    {% endif %}
+  </tbody>
+
+</form>
+
+<br></br><br></br><br></br>
+{% endblock %}

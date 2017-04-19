@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form method="post">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+  {{ form.as_p}}
+  <div class="container_12 top-1">
+    <br></br>
+    <div class="grid_4 box-1"><a class="button" href="{% url 'Ieeetd' %}" >32 Bits</a></div>
+    <div class="grid_4 box-1"><a class="button" href="{% url 'Ieeesc' %}">64 Bits </a></div>
+
+  </div>
+</form>
+
+<br></br><br></br><br></br>
+{% endblock %}

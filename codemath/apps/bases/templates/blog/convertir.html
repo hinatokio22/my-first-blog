@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form action="{% url 'Bases' %}" method="post">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+  {{ form.as_p}}
+  <div class="btns">
+      <h2>conversion de bases </h2>
+      <br></br>
+      <label for="decimal"><strong>Decimal:</strong>
+      <input type="text" value="{{deci}}" id="decimal" name="decimal"></label>
+      <br></br>
+      <label for="binario"><strong>Binario:</strong>
+      <input type="text" value="{{bina}}" id="binario" name="binario"></label>
+      <br></br>
+      <label for="octal"><strong>Octal:</strong>
+      <input type="text" value="{{octa}}" id="octal" name="octal"></label>
+      <br></br>
+      <label for="hexadecimal"><strong>Hexadecial:</strong>
+      <input type="text" value="{{hexa}}" id="hexadecimal" name="hexadecimal"></label>
+      <br></br>
+  </div>
+  <div class="btns"><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+</form>
+<tbody>
+}
+</tbody>
+<br></br><br></br><br></br>
+{% endblock %}
