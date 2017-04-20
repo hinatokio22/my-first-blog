@@ -5,7 +5,7 @@ body {
 	font: 14px/24px Tahoma, Geneva, sans-serif,color:#000;
 	color:#000;
 	min-width:1264px;
-	background: #fff;
+	background: #000;
 }
 .ic {border:0;float:right;background:#000;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .main {width:940px; margin:0 auto;}
@@ -19,9 +19,9 @@ a:hover {text-decoration:none;}
 .link {color:#ef6f53; text-decoration:none; }
 .link:hover {text-decoration:underline;}
 
-.clr-1 { color:#fff;}
+.clr-1 { color:#000;}
 
-.text-1 {color:#fff; font-size:18px; line-height:24px;}
+.text-1 {color:#000; font-size:18px; line-height:24px;}
 
 h2 { font-size:26px; line-height:32px; color:#000; font-weight:normal;}
 h3 { font-size:18px; line-height:24px; color:#000; font-weight:normal;}
@@ -104,8 +104,8 @@ ul.menu li a:hover , ul.menu li.current a { color:#ef6f53; }
 #content {width:960px; margin:0 auto; padding:0px 0px 55px 0; position:relative;}
 
 
-.box-1 a {background:url(../images/marker-2.gif) right 13px no-repeat #0c0c0c; font-size:26px; line-height:32px; color:#636f6f; letter-spacing:-1px; display:block; padding:5px 26px 12px 25px;}
-.box-1 a:hover {background-color:#2f2929;}
+.box-1 a {background:url(../images/marker-2.gif) right 13px no-repeat #fff; font-size:26px; line-height:32px; color:#636f6f; letter-spacing:-1px; display:block; padding:5px 26px 12px 25px;}
+.box-1 a:hover {background-color:#fff;}
 
 .line {background:url(../images/line.png) 0 0 repeat-x; height:5px;}
 
