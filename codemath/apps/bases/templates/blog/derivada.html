@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+CODEMATH
+{% endblock %}
+{% block content %}
+<form action="{% url 'derivada' %}" method="POST">
+  <font color="White" face="Comic Sans MS">
+  {% csrf_token %}
+
+  <div class="btns">
+      <h2>Derivadas</h2>
+      <br></br>
+      <label for="funcion"><strong>Funcion:</strong>
+
+      <input type="text" value="" id="funcion" name="funcion"></label>
+
+      <br></br>
+      <label for="valorx"><strong>Valor de x:</strong>
+      <input type="text" value="" id="valorx" name="valorx"></label>
+      <br></br>
+  </div>
+  <div class="btns"><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+  <br></br><br></br>
+  <tbody>
+    {% if primera %}
+    <tr>
+      <td>la integral es por izquierda es:</td>
+      <td>{{primera}}</td>
+    </tr>
+    {% endif %}
+    <br>
+
+    {% if primeraNum %}
+    <tr>
+      <td>la integral por derecha es:</td>
+      <td>{{primeraNum}}</td>
+    </tr>
+    {% endif %}
+    <br>
+
+    {% if segunda %}
+    <tr>
+      <td>la integral por el medio es :</td>
+      <td>{{segunda}}</td>
+    </tr>
+    {% endif %}
+    <br>
+
+    {% if segundaNum %}
+    <tr>
+      <td>la integral por el medio es :</td>
+      <td>{{segundaNum}}</td>
+    </tr>
+    {% endif %}
+  </tbody>
+</form>
+<br></br><br></br><br></br>
+{% endblock %}

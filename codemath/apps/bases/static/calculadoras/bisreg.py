@@ -1,8 +1,9 @@
 from math import*
 #from sympy.solvers import solve
-#from sympy import Symbol
+#from sympy import diff
 #from pylab import *
 #from numpy import *
+
 
 class Bisec:
 
@@ -132,9 +133,15 @@ class Deriv:
 
     def derivando(self,x,funcion):
         m=Deriv()
-        newfun=str(m.derivada(funcion))
-        res=m.funcion_evaluada(x,newfun)
-        return res
+        primera=str(m.derivada(funcion))
+        acumulado=primera
+        res=m.funcion_evaluada(x,primera)
+        acumulado=str(acumulado+"-"+str(res))
+        segunda=str(m.derivada(primera))
+        acumulado=str(acumulado+"-"+segunda)
+        resdos=m.funcion_evaluada(x,segunda)
+        acumulado=str(acumulado+"-"+str(resdos))
+        return acumulado
 
 class Simp13:
 
